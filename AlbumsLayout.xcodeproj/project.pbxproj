@@ -9,25 +9,28 @@
 /* Begin PBXBuildFile section */
 		8C7C61E729BCE67400F59152 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C61E629BCE67400F59152 /* AppDelegate.swift */; };
 		8C7C61E929BCE67400F59152 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C61E829BCE67400F59152 /* SceneDelegate.swift */; };
-		8C7C61EB29BCE67400F59152 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C61EA29BCE67400F59152 /* ViewController.swift */; };
 		8C7C61F029BCE67500F59152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C7C61EF29BCE67500F59152 /* Assets.xcassets */; };
 		8C7C61F329BCE67500F59152 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C7C61F129BCE67500F59152 /* LaunchScreen.storyboard */; };
 		8CC7270A29C1E5BF00128941 /* PhotosTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC7270929C1E5BF00128941 /* PhotosTabBarController.swift */; };
 		8CC7270D29C1E68100128941 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC7270C29C1E68100128941 /* AlbumsViewController.swift */; };
 		8CC7270F29C1E6E100128941 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC7270E29C1E6E100128941 /* LibraryViewController.swift */; };
+		8CC7271229C1EF2800128941 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8CC7271129C1EF2800128941 /* SnapKit */; };
+		8CC7271429C1F02600128941 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC7271329C1F02600128941 /* AlbumCollectionViewCell.swift */; };
+		8CC7271929C22B4200128941 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC7271829C22B4200128941 /* Album.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8C7C61E329BCE67400F59152 /* AlbumsLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbumsLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C7C61E629BCE67400F59152 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C7C61E829BCE67400F59152 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8C7C61EA29BCE67400F59152 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8C7C61EF29BCE67500F59152 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C7C61F229BCE67500F59152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C7C61F429BCE67500F59152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CC7270929C1E5BF00128941 /* PhotosTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTabBarController.swift; sourceTree = "<group>"; };
 		8CC7270C29C1E68100128941 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		8CC7270E29C1E6E100128941 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		8CC7271329C1F02600128941 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		8CC7271829C22B4200128941 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CC7271229C1EF2800128941 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +109,7 @@
 		8CC7270829C1E50E00128941 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				8CC7271729C22B3800128941 /* Models */,
 				8CC7270B29C1E65200128941 /* Controllers */,
 			);
 			path = App;
@@ -113,12 +118,20 @@
 		8CC7270B29C1E65200128941 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8C7C61EA29BCE67400F59152 /* ViewController.swift */,
 				8CC7270929C1E5BF00128941 /* PhotosTabBarController.swift */,
 				8CC7270C29C1E68100128941 /* AlbumsViewController.swift */,
+				8CC7271329C1F02600128941 /* AlbumCollectionViewCell.swift */,
 				8CC7270E29C1E6E100128941 /* LibraryViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8CC7271729C22B3800128941 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8CC7271829C22B4200128941 /* Album.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +150,9 @@
 			dependencies = (
 			);
 			name = AlbumsLayout;
+			packageProductDependencies = (
+				8CC7271129C1EF2800128941 /* SnapKit */,
+			);
 			productName = AlbumsLayout;
 			productReference = 8C7C61E329BCE67400F59152 /* AlbumsLayout.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +181,9 @@
 				Base,
 			);
 			mainGroup = 8C7C61DA29BCE67400F59152;
+			packageReferences = (
+				8CC7271029C1EF2800128941 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 8C7C61E429BCE67400F59152 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -191,12 +210,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C7C61EB29BCE67400F59152 /* ViewController.swift in Sources */,
 				8CC7270A29C1E5BF00128941 /* PhotosTabBarController.swift in Sources */,
 				8C7C61E729BCE67400F59152 /* AppDelegate.swift in Sources */,
 				8C7C61E929BCE67400F59152 /* SceneDelegate.swift in Sources */,
 				8CC7270F29C1E6E100128941 /* LibraryViewController.swift in Sources */,
 				8CC7270D29C1E68100128941 /* AlbumsViewController.swift in Sources */,
+				8CC7271929C22B4200128941 /* Album.swift in Sources */,
+				8CC7271429C1F02600128941 /* AlbumCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +424,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8CC7271029C1EF2800128941 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8CC7271129C1EF2800128941 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8CC7271029C1EF2800128941 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8C7C61DB29BCE67400F59152 /* Project object */;
 }

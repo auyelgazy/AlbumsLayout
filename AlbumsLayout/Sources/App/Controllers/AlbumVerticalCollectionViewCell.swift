@@ -8,40 +8,44 @@
 import UIKit
 import SnapKit
 
-final class AlbumCollectionViewCell: UICollectionViewCell {
+final class AlbumVerticalCollectionViewCell: UICollectionViewCell {
 
-    static let identifier = "AlbumCell"
+    static let identifier = "AlbumVerticalCell"
 
     var album: Album? {
         didSet {
             guard let album = album else { return }
             albumName.text = album.name
             albumCount.text = String(album.count)
-            albumImage.image = UIImage(named: album.imageName)
+            albumImage.image = UIImage(systemName: album.imageName)
         }
     }
 
     // MARK: - UI Elements
 
+    private lazy var imageContainer: UIView = {
+        let view = UIView()
+        return view
+    }()
+
     private lazy var albumImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 5
         return imageView
     }()
 
     private lazy var albumName: UILabel = {
         let label = UILabel()
-        label.textColor = .label
-        label.font = .systemFont(ofSize: 16)
+        label.textColor = .systemBlue
+        label.font = .systemFont(ofSize: 20)
         return label
     }()
 
     private lazy var albumCount: UILabel = {
         let label = UILabel()
         label.textColor = .secondaryLabel
-        label.font = .systemFont(ofSize: 16)
+        label.font = .systemFont(ofSize: 18)
         return label
     }()
 
@@ -60,22 +64,30 @@ final class AlbumCollectionViewCell: UICollectionViewCell {
     // MARK: - Setup
 
     private func setupHierarchy() {
-        contentView.addSubviews(albumImage, albumName, albumCount)
+        imageContainer.addSubview(albumImage)
+        contentView.addSubviews(imageContainer, albumName, albumCount)
     }
 
     private func setupConstraints() {
+        imageContainer.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(8)
+            $0.width.height.equalTo(30)
+            $0.centerY.equalToSuperview()
+        }
         albumImage.snp.makeConstraints {
-            $0.leading.top.trailing.equalToSuperview()
-            $0.height.equalTo(160)
+            $0.leading.top.equalToSuperview().offset(2)
+            $0.trailing.bottom.equalToSuperview().offset(-2)
+            $0.centerY.equalToSuperview()
         }
 
         albumName.snp.makeConstraints {
-            $0.top.equalTo(albumImage.snp.bottom).offset(6)
+            $0.leading.equalTo(imageContainer.snp.trailing).offset(10)
+            $0.centerY.equalToSuperview()
         }
 
         albumCount.snp.makeConstraints {
-            $0.top.equalTo(albumName.snp.bottom)
-//            $0.bottom.equalToSuperview().offset(6)
+            $0.trailing.equalToSuperview().offset(-24)
+            $0.centerY.equalToSuperview()
         }
     }
 
@@ -84,13 +96,5 @@ final class AlbumCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         album = nil
-    }
-}
-
-// MARK: - Extensions
-
-extension UIView {
-    func addSubviews(_ subviews: UIView...) {
-        subviews.forEach { addSubview($0) }
     }
 }

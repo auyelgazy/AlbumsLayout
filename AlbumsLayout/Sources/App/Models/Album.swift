@@ -16,7 +16,7 @@ struct Album {
 extension Album {
     static let albums = [
         Album(name: "Recents", imageName: "image1", count: 483),
-        Album(name: "Family", imageName: "image2", count: 9),
+        Album(name: "Favorites", imageName: "image2", count: 9),
         Album(name: "Family", imageName: "image3", count: 123),
         Album(name: "Family", imageName: "image4", count: 40),
         Album(name: "Family", imageName: "image5", count: 55),

@@ -27,20 +27,21 @@ final class AlbumCollectionViewCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 5
         return imageView
     }()
 
     private lazy var albumName: UILabel = {
         let label = UILabel()
         label.textColor = .label
-        label.font = .systemFont(ofSize: 18)
+        label.font = .systemFont(ofSize: 16)
         return label
     }()
 
     private lazy var albumCount: UILabel = {
         let label = UILabel()
         label.textColor = .secondaryLabel
-        label.font = .systemFont(ofSize: 18)
+        label.font = .systemFont(ofSize: 16)
         return label
     }()
 
@@ -65,16 +66,24 @@ final class AlbumCollectionViewCell: UICollectionViewCell {
     private func setupConstraints() {
         albumImage.snp.makeConstraints {
             $0.leading.top.trailing.equalToSuperview()
-//            $0.height.equalTo(200)
+            $0.height.equalTo(160)
         }
 
         albumName.snp.makeConstraints {
-            $0.top.equalTo(albumImage.snp.bottom)
+            $0.top.equalTo(albumImage.snp.bottom).offset(6)
         }
 
         albumCount.snp.makeConstraints {
             $0.top.equalTo(albumName.snp.bottom)
+//            $0.bottom.equalToSuperview().offset(6)
         }
+    }
+
+    // MARK: - Reuse
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        album = nil
     }
 }
 

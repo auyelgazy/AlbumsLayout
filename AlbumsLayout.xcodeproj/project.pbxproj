@@ -17,6 +17,7 @@
 		8CC7271229C1EF2800128941 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8CC7271129C1EF2800128941 /* SnapKit */; };
 		8CC7271429C1F02600128941 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC7271329C1F02600128941 /* AlbumCollectionViewCell.swift */; };
 		8CC7271929C22B4200128941 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC7271829C22B4200128941 /* Album.swift */; };
+		8CFA5F5129C24812000AD630 /* AlbumHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFA5F5029C24812000AD630 /* AlbumHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		8CC7270E29C1E6E100128941 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		8CC7271329C1F02600128941 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		8CC7271829C22B4200128941 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		8CFA5F5029C24812000AD630 /* AlbumHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				8CC7271729C22B3800128941 /* Models */,
 				8CC7270B29C1E65200128941 /* Controllers */,
+				8CFA5F5029C24812000AD630 /* AlbumHeader.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				8CC7270F29C1E6E100128941 /* LibraryViewController.swift in Sources */,
 				8CC7270D29C1E68100128941 /* AlbumsViewController.swift in Sources */,
 				8CC7271929C22B4200128941 /* Album.swift in Sources */,
+				8CFA5F5129C24812000AD630 /* AlbumHeader.swift in Sources */,
 				8CC7271429C1F02600128941 /* AlbumCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

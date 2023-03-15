@@ -131,4 +131,8 @@ extension AlbumsViewController: UICollectionViewDataSource, UICollectionViewDele
         header.title.text = albums[indexPath.section][indexPath.row].type == .horizontal ? "My Albums" : "Media Types"
         return header
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("item name: \(albums[indexPath.section][indexPath.row].name), count: \(albums[indexPath.section][indexPath.row].count)")
+    }
 }

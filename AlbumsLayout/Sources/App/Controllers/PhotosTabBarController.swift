@@ -9,16 +9,20 @@ import UIKit
 
 final class PhotosTabBarController: UITabBarController {
 
+    // MARK: - Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabs()
     }
 
+    // MARK: - Setup
+    
     private func setupTabs() {
-        let libraryVC = LibraryViewController()
-        let forYouVC = LibraryViewController()
+        let libraryVC = ViewController()
+        let forYouVC = ViewController()
         let albumsVC = AlbumsViewController()
-        let searchVC = LibraryViewController()
+        let searchVC = ViewController()
 
         libraryVC.navigationItem.largeTitleDisplayMode = .automatic
         forYouVC.navigationItem.largeTitleDisplayMode = .automatic
@@ -30,7 +34,7 @@ final class PhotosTabBarController: UITabBarController {
         let nav3 = UINavigationController(rootViewController: albumsVC)
         let nav4 = UINavigationController(rootViewController: searchVC)
 
-        nav1.tabBarItem = UITabBarItem(title: "Library", image: UIImage(systemName: "photo.on.rectangle"), tag: 1)
+        nav1.tabBarItem = UITabBarItem(title: "Library", image: UIImage(systemName: "photo.fill.on.rectangle.fill"), tag: 1)
         nav2.tabBarItem = UITabBarItem(title: "For You", image: UIImage(systemName: "newspaper.fill"), tag: 1)
         nav3.tabBarItem = UITabBarItem(title: "Albums", image: UIImage(systemName: "rectangle.stack.fill"), tag: 1)
         nav4.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 1)

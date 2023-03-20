@@ -19,10 +19,10 @@ final class PhotosTabBarController: UITabBarController {
     // MARK: - Setup
     
     private func setupTabs() {
-        let libraryVC = ViewController()
-        let forYouVC = ViewController()
+        let libraryVC = DefaultViewController()
+        let forYouVC = DefaultViewController()
         let albumsVC = AlbumsViewController()
-        let searchVC = ViewController()
+        let searchVC = DefaultViewController()
 
         libraryVC.navigationItem.largeTitleDisplayMode = .automatic
         forYouVC.navigationItem.largeTitleDisplayMode = .automatic

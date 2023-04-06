@@ -14,7 +14,7 @@ final class AlbumHorizontalCollectionViewCell: UICollectionViewCell {
 
     var album: Album? {
         didSet {
-            guard let album = album else { return print("Album has no value") }
+            guard let album = album else { return }
             albumName.text = album.name
             albumCount.text = String(album.count)
             albumImage.image = UIImage(named: album.imageName)
@@ -66,7 +66,7 @@ final class AlbumHorizontalCollectionViewCell: UICollectionViewCell {
     private func setupConstraints() {
         albumImage.snp.makeConstraints {
             $0.leading.top.trailing.equalToSuperview()
-            $0.height.equalTo(160)
+            $0.height.equalToSuperview().multipliedBy(0.75)
         }
 
         albumName.snp.makeConstraints {

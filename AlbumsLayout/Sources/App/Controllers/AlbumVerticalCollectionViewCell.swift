@@ -14,7 +14,7 @@ final class AlbumVerticalCollectionViewCell: UICollectionViewCell {
 
     var album: Album? {
         didSet {
-            guard let album = album else { return print("Album has no value") }
+            guard let album = album else { return }
             albumName.text = album.name
             albumCount.text = String(album.count)
             albumImage.image = UIImage(systemName: album.imageName)

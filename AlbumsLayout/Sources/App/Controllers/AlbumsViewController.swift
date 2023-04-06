@@ -75,7 +75,7 @@ final class AlbumsViewController: UIViewController {
             if sectionIndex == 0 {
                 let layoutItem = NSCollectionLayoutItem(layoutSize: LayoutConstants.itemSize)
                 layoutItem.contentInsets = LayoutConstants.itemInsets
-                let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: LayoutConstants.groupSize, subitem: layoutItem, count: 2)
+                let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: LayoutConstants.groupSize, repeatingSubitem: layoutItem, count: 2)
                 layoutGroup.contentInsets = LayoutConstants.groupInsets
                 let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
                 layoutSection.contentInsets = LayoutConstants.horizontalSectionInsets

@@ -1,5 +1,5 @@
 //
-//  LibraryViewController.swift
+//  DefaultViewController.swift
 //  AlbumsLayout
 //
 //  Created by Kuanysh al-Khattab Auyelgazy on 15.03.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class LibraryViewController: UIViewController {
+final class DefaultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
